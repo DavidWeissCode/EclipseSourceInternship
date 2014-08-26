@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>CKEditor Test</title>
+    <script src="./ckeditor/ckeditor.js"></script>
+  </head>
+  <body>
+
+    <p>P1</p>
+    <textarea id="editor1"></textarea>
+    <p contentEditable="true">Inline Editor by element property</p>
+    <textarea id="editor2"></textarea>
+    <p id="paragraph3">Inline Editor by JavaScript call</p>
+    <textarea class="ckeditor" id="editor3"></textarea>
+    <p name="inlineEditorParagraph">HTML Element as Inline Editor</p>
+
+    <script>
+      var editor1 = CKEDITOR.replace( "editor1", {  // needs <textarea>
+        uiColor: '#14B8C4',
+        language: "de",
+        fullPage: true,
+        allowedContent: true
+      } );
+
+      var editor2 = CKEDITOR.replace( "editor2", {
+        uiColor: "#f0aa50",
+        language: "defaultLanguage",
+        allowedContent: "p"
+      } );
+      editor2.setData( '<p style="color: red">Hello <em>world</em>!</p><div style="color: red">Hello <em>world</em>!</div>' );
+      //alert( editor2.getData() );
+
+      CKEDITOR.inline( document.getElementById( 'paragraph3' ) );
+      CKEDITOR.inline( 'inlineEditorParagraph' );
+    </script>
+  </body>
+</html>
