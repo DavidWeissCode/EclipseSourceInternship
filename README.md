@@ -1,4 +1,4 @@
 practice
 ========
 
-Different coding examples for test purposes only.
+Different code from the internship at EclipseSource
