@@ -6,25 +6,22 @@
 </head>
 <body>
   <p>This is a test for <b>string.js</b></p>
-  <p id="1">Let's do some string modification!</p>
+  <p id="teststring">Let's do some string modification!</p>
   <button type="button" onclick="myStringJSFunction()">Click Me!</button>
+  <p id="1"></p>
   <p id="2"></p>
   <p id="3"></p>
   <p id="4"></p>
   <p id="5"></p>
-  <p id="5"></p>
-  <p id="6"></p>
-  <p id="7"></p>
   
   <script>
   	function myStringJSFunction() {
-  	  var testString = document.getElementById("1").innerHTML;
-  	  document.getElementById("2").innerHTML = "2 " + S(testString).right(13);
-  	  document.getElementById("3").innerHTML = "3 " + S(testString).left(5);
-  	  document.getElementById("4").innerHTML = "4 " + S(testString).count();
-  	  document.getElementById("5").innerHTML = "5 " + "it contains 'do' " + S(testString).contains("do");
-  	  document.getElementById("6").innerHTML = "6 " + "is numeric " + S(testString).isNumeric();
-  	  document.getElementById("7").innerHTML = "7 " + "it contains 'o' " + S(testString).count("o") + " times";
+  	  var testString = document.getElementById("teststring").innerHTML;
+  	  document.getElementById("1").innerHTML = "1 " + S(testString).right(13);
+  	  document.getElementById("2").innerHTML = "2 " + S(testString).left(5);
+  	  document.getElementById("3").innerHTML = "3 " + "it contains 'do' " + S(testString).contains("do");
+  	  document.getElementById("4").innerHTML = "4 " + "is numeric " + S(testString).isNumeric();
+  	  document.getElementById("5").innerHTML = "5 " + "it contains 'o' " + S(testString).count("o") + " times";
   	}
   </script>
 </body>
