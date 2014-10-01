@@ -1,0 +1,13 @@
+{
+  "resources": [
+    {
+      "src": "../tabris.js"
+    },
+    {
+      "src": "stringlibrary.js"
+    },
+    {
+      "src": "string.js"
+    }
+  ]
+}

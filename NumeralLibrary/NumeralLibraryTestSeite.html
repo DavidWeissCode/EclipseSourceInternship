@@ -1,0 +1,28 @@
+<html>
+<head>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+
+</head>
+<body>
+
+  <h1>This is a test for numeral.js</h1>
+  <p id="teststring">Let's do some number formatting!</p>
+  <button type="button" onclick="myNumeralJSFunction()">Click Me!</button>
+  <p id="0">10000</p>
+  <p id="1">10000.23</p>
+  <p id="2">0.23</p>
+  <p id="3">0.23</p>
+  <p id="4">1000.234</p>
+
+  <script>
+    function myNumeralJSFunction() {
+      for(var i=0; i<5; ++i) {
+        var number = document.getElementById(i).innerHTML;
+        document.getElementById(i).innerHTML = numeral(number).format('0,0.0000');
+      }
+    }
+  </script>
+
+</body>
+</html>
