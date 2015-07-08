@@ -1,4 +1,4 @@
-practice
+EclipseSourceInternship
 ========
 
-Different code from the internship at EclipseSource
+JavaScript and Tabris.js contributions of my internship at EclipseSource.
