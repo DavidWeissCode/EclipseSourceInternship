@@ -1,0 +1,46 @@
+<html>
+<head>
+
+  <script src="https://cdn.rawgit.com/jprichardson/string.js/master/lib/string.min.js"></script>
+  <script src="underscore.js" type="text/javascript"></script>
+
+</head>
+<body>
+  <p>This is a test for <b>string.js</b></p>
+  <p id="teststring">Let's do some string manipulation!</p>
+  <button type="button" onclick="myStringJSFunction()">Click Me for string.js!</button>
+  <p id="1"></p>
+  <p id="2"></p>
+  <p id="3"></p>
+  <p id="4"></p>
+  <p id="5"></p>
+  <button type="button" onclick="myUnderscoreFunction()">Click Me for underscore.js!</button>
+
+  <script>
+    function myStringJSFunction() {
+      var testString = document.getElementById("teststring").innerHTML;
+      document.getElementById("1").innerHTML = "1 " + S(testString).right(13);
+      document.getElementById("2").innerHTML = "2 " + S(testString).left(5);
+      document.getElementById("3").innerHTML = "3 " + "it contains 'do' " + S(testString).contains("do");
+      document.getElementById("4").innerHTML = "4 " + "is numeric " + S(testString).isNumeric();
+      document.getElementById("5").innerHTML = "5 " + "it contains 'o' " + S(testString).count("o") + " times";
+    }
+    function myUnderscoreFunction() {
+      var templ1 = _.template("Hello <%= firstname %> <%= lastname %>");
+      console.log(templ1({firstname: 'moe', lastname: 'foo'}));
+
+      var a = templ1({firstname: 'foo', lastname: 'bar'});
+      console.log(a);
+
+      var templ2 = _.template("<% print('Hello ' + epithet); %>");
+      console.log(templ2({epithet: "stooge"}));
+
+      var templ3 = _.template("Hello <%= name %>, nice to meet you!", {variable: "name"});
+      console.log(templ3("Dude"));
+      var b = templ3("Hans");
+      console.log(typeof templ3);
+      console.log(typeof b);
+    }
+  </script>
+</body>
+</html>
